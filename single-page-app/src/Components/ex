@@ -1,0 +1,52 @@
+import { BrowserRouter, Route } from "react-router-dom"
+
+export default function AppComponent() {
+    return (
+        <BrowserRouter>
+            <>
+                <h1>Welcome to React Session...</h1>
+                <nav>
+                    <a style={{paddingRight: "10px"}} href="/">Home</a>
+                    <a style={{paddingRight: "10px"}} href="/help">Help</a>
+                    <a style={{paddingRight: "10px"}} href="/about">About</a>
+                </nav>
+                
+                <div>
+                    <h1>This is the Common Part of the Application</h1>
+                    
+                    <div style={{height: "500px", border: "1px solid grey", padding: "20px"}}>
+                        <Route exact path="/" component={HomeComponent}></Route>
+                        <Route exact path="/help" component={HelpComponent}></Route>
+                        <Route exact path="/about" component={AboutComponent}></Route> 
+                    </div>
+                    
+                    <h2>This is the common footer</h2>                    
+                </div>
+            </>
+        </BrowserRouter>
+    )
+}
+
+function HomeComponent() {
+    return (
+        <>
+            <h1>This is Home Page</h1>
+        </>
+    )
+}
+
+function HelpComponent() {
+    return (
+        <>
+            <h1>This is Help Page</h1>
+        </>
+    )
+}
+
+function AboutComponent() {
+    return (
+        <>
+            <h1>This is About Page</h1>
+        </>
+    )
+}

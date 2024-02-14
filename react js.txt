@@ -1,0 +1,2 @@
+hoisting is done only for declarations, not definitions.
+same variable name, but if put in a function new memory is assigned for the function
